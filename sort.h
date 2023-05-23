@@ -20,6 +20,7 @@ typedef struct listint_s
     struct listint_s *next;
 } listint_t;
 
+void doubleSwap(listint_t **list, listint_t **node1, listint_t *node2);
 void swap(int *a, int *b);
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
