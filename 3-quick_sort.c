@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * swap - swap two values
+ * swapValues - swap two values
  * @a: first element to swap
  * @b: second element to swap
  */
@@ -19,6 +19,7 @@ void swapValues(int *a, int *b)
  * @size: size of the array
  * @low: index 0
  * @rSize: The real size of the array
+ * Return: return the index
  */
 size_t lomuto(int *array, int low, int size, size_t rSize)
 {
