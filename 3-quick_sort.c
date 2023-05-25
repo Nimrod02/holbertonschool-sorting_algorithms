@@ -1,6 +1,19 @@
 #include "sort.h"
 
 /**
+ * swap - swap two values
+ * @a: first element to swap
+ * @b: second element to swap
+ */
+
+void swapValues(int *a, int *b)
+{
+	int tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+/**
  * lomuto - function to make partition lomuto
  * @array: array containing data
  * @size: size of the array
@@ -17,14 +30,14 @@ size_t lomuto(int *array, int low, int size, size_t rSize)
 	{
 		if (array[index2] <= pivot)
 		{
-			swap(&array[index], &array[index2]);
+			swapValues(&array[index], &array[index2]);
 			if (array[index] != array[index2])
 				print_array(array, rSize);
 			index++;
 		}
 		index2++;
 	}
-	swap(&array[index], &array[size]);
+	swapValues(&array[index], &array[size]);
 	if (array[index] != array[size])
 		print_array(array, rSize);
 	return (index);
